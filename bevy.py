@@ -8,6 +8,7 @@ print("contents in csv file:", df)
 plt.plot(df.Flow_ls, df.Head_m)
 
 # option = st.selectbox('Select pump model',(x1,x2,x3)) 
-plt.show()
+
 st.area_chart()
+plt.show()
 st.set_option('deprecation.showPyplotGlobalUse', False)
