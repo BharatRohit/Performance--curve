@@ -1,14 +1,11 @@
-import streamlit as st
-import pandas as pd
-
 import matplotlib.pyplot as plt
-columns = ["Flow_ls", "Head_m"]
-df = pd.read_csv("CSV.csv", usecols=columns)
-print("contents in csv file:", df)
-plt.plot(df.Flow_ls, df.Head_m)
+import numpy as np
 
-# option = st.selectbox('Select pump model',(x1,x2,x3)) 
+df = pd.read_csv('CSV.csv')
+x = df['FLOW']
+y = df['HEAD']
 
-st.area_chart()
+plt.plt(x,y)
+plt.fill_between(x,y, color="lightblue", alpha=0.5)
+
 plt.show()
-st.set_option('deprecation.showPyplotGlobalUse', False)
